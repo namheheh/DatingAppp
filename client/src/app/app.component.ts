@@ -8,11 +8,10 @@ import { ProductService } from './service/service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'client';
   products: Iproduct[] = [];
   constructor(private productService: ProductService) {
     this.productService.getProducts().subscribe(data => {
-      this.products = data
+      this.products = data;
     })
   }
 }
